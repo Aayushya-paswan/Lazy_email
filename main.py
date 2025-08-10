@@ -9,22 +9,20 @@ def index():
    if request.method == 'POST':
         recipients = request.form.get('Recipients')
         prompts = request.form.get('Prompts')
-        subject = give_response("""Generate only a concise subject line for the following email content. 
-        Do not include any explanation, greeting, punctuation outside the subject, or quotation marks. 
-        Only return the subject text itself.
+        subject = give_response("""Write a short, impactful, and attention-grabbing email subject line based on the following prompt.
+The subject should match the tone and purpose of the email, be concise (ideally under 10 words), and encourage the recipient to open it.
+If key details are missing, fill them in logically to make the subject line relevant and compelling.
+Do not include any part of the email body, greeting, closing, or extra explanation — return only the subject line.
 
-        Email content:
-        """ + prompts)
-        body = give_response("""Write a clear, engaging email body based on the following prompt.  
-        Determine whether the tone should be formal, semi-formal, or informal depending on the context.  
-        If the prompt lacks necessary details, fill them in logically to make the email complete and coherent.  
-        Keep the length appropriate for the context — concise for short updates, detailed for explanations or invitations.  
-        Avoid writing the subject line, greetings, or closings unless specifically asked.  
-        Only return the main body text of the email.
+here id the Email context: """ + prompts)
+        body = give_response("""Write only the main body text for an email based on the following prompt.
+Do not include a subject line, greeting, closing, signature, or any extra explanation.
+Use a tone (formal, semi-formal, or informal) that fits the context, but do not mention the tone in your response.
+If details are missing, fill them in logically to make the email clear and coherent.
+Keep the length appropriate for the situation — concise for quick updates, more detailed for explanations or invitations.
+Respond with only the email body text, nothing else.
 
-        Prompt:
-
-        """+prompts)
+Here is the Email context:  """+prompts)
        # print(f"subject:- {subject}")
        # print(f"{body}")
         url = gmail_compose_url(recipients, str(subject), str(body))
