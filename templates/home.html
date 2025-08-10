@@ -4,22 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lazy Email - AI Email Generator</title>
+    <link rel="stylesheet" href="static/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <h1>Lazy Email</h1>
-    <div class="card">
-        <form>
-            <label for="Recipients">Enter Recipients:</label>
-            <input type="text" id="Recipients" name="Recipients"><br><br>
-
-            <label for="Prompts">Prompts:</label>
-            <input type="text" id="Prompts" name="Prompts"><br><br>
-
-            <button type="submit">Submit</button>
-    </div>
-    </form>
+<body class="bg-slate-900 text-slate-100">
+    <header class="top-0 bg-slate-800/95 backdrop-blur-sm border-b border-slate-700/50 text-slate-100 py-4 px-6 shadow-lg z-50 h-28">
+        <h1 class="text-6xl font-black flex justify-center items-center font-['Orbitron'] text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text pt-2 tracking-wider drop-shadow-[0_0_20px_rgba(34,211,238,0.5)] animate-pulse">LAZY EMAIL</h1>
+    </header>
+    
+    <main class="min-h-screen flex items-center justify-center p-6">
+        <div class="card bg-slate-800/60 backdrop-blur-sm p-8 rounded-xl shadow-2xl w-full max-w-md border border-slate-700/50">
+            <form method="POST" class="space-y-6">
+                <div class="space-y-2">
+                    <label for="Recipients" class="block text-sm font-medium text-slate-300">Enter Reciever's Email</label>
+                    <input type="text" id="Recipients" placeholder="xyz@gmail.com" name="Recipients" class="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-slate-100 placeholder-slate-400 transition-all duration-200">
+                </div>
+                
+                <div class="space-y-2">
+                    <label for="Prompts" class="block text-sm font-medium text-slate-300">Explain Email Requirements</label>
+                    <input type="text" placeholder="e.g. Application for leave due to fever" placeid="Prompts" name="Prompts" class="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-slate-100 placeholder-slate-400 transition-all duration-200">
+                </div>
+                
+                <div class="space-y-2">
+                    <label for="styleSelect" class="block text-sm font-medium text-slate-300">Choose a style:</label>
+                    <select id="styleSelect" name="style" class="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-slate-100 transition-all duration-200">
+                        <option value="formal">Formal</option>
+                        <option value="informal">Informal</option>
+                        <option value="auto">Auto(Let AI decide)</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl">Draft an Email</button>
+            </form>
+        </div>
+    </main>
+    
+    <footer class="bg-slate-800/95 border-t border-slate-700/50">
+        <div class="container mx-auto px-4 py-8 text-center">
+            <h5 class="text-lg font-semibold text-slate-200 mb-4">©2025 LAZY EMAIL. All rights reserved. By Aayushya and Priyansu</h5>
+            <div class="githubcontainer space-x-4 mb-4">
+                <a href="https://github.com/Aayushya-paswan" target="_blank" class="inline-block px-4 py-2 bg-slate-700/50 hover:bg-slate-600/70 rounded-lg transition-all duration-200 hover:text-blue-400 border border-slate-600/50">Aayushya's GitHub</a>
+                <a href="https://github.com/priyansu-1o" target="_blank" class="inline-block px-4 py-2 bg-slate-700/50 hover:bg-slate-600/70 rounded-lg transition-all duration-200 hover:text-blue-400 border border-slate-600/50">Priyansu's GitHub</a>
+            </div>
+            <div class="linkedin space-x-4">
+                <a href="https://www.linkedin.com/in/aayushya78/" target="_blank" class="inline-block px-4 py-2 bg-slate-700/50 hover:bg-slate-600/70 rounded-lg transition-all duration-200 hover:text-blue-400 border border-slate-600/50">Aayushya's LinkedIn</a>
+                <a href="https://www.linkedin.com/in/priyansu-samanta-7924b930b/" target="_blank" class="inline-block px-4 py-2 bg-slate-700/50 hover:bg-slate-600/70 rounded-lg transition-all duration-200 hover:text-blue-400 border border-slate-600/50">Priyansu's LinkedIn</a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
