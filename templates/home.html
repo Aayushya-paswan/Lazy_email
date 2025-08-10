@@ -8,45 +8,46 @@
     <link rel="stylesheet" href="output.css">
 </head>
 
-<body>
-    <header class="sticky top-0 bg-gray-900 text-white py-4 px-6 shadow-md z-50">
-        <h1 class="text-xl font-bold flex justify-center align-middle font-serif">Lazy Email</h1>
+<body class="bg-slate-900 text-slate-100">
+    <header class="sticky top-0 bg-slate-800/95 backdrop-blur-sm border-b border-slate-700/50 text-slate-100 py-4 px-6 shadow-lg z-50 h-28">
+        <h1 class="text-6xl font-bold flex justify-center items-center font-serif text-transparent bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text pt-2">Lazy Email</h1>
     </header>
-    <main>
-        <div class="card">
-            <form method="POST">
-                <label for="Recipients">Enter Recipients:</label>
-                <input type="text" id="Recipients" name="Recipients"><br> <br>
-                <label for="Prompts">Prompts:</label>
-                <input type="text" id="Prompts" name="Prompts"><br><br>
-                <label for="styleSelect">Choose a style:</label>
-                <select id="styleSelect" name="style">
-                    <option value="formal">Formal</option>
-                    <option value="informal">Informal</option>
-                    <option value="auto">Auto</option>
-                </select>
-                <br>
-                <button type="submit">Submit</button>
+    <main class="min-h-screen flex items-center justify-center p-6">
+        <div class="card bg-slate-800/60 backdrop-blur-sm p-8 rounded-xl shadow-2xl w-full max-w-md border border-slate-700/50">
+            <form method="POST" class="space-y-6">
+                <div class="space-y-2">
+                    <label for="Recipients" class="block text-sm font-medium text-slate-300">Enter Recipients:</label>
+                    <input type="text" id="Recipients" name="Recipients" class="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-slate-100 placeholder-slate-400 transition-all duration-200">
+                </div>
+                
+                <div class="space-y-2">
+                    <label for="Prompts" class="block text-sm font-medium text-slate-300">Prompts:</label>
+                    <input type="text" id="Prompts" name="Prompts" class="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-slate-100 placeholder-slate-400 transition-all duration-200">
+                </div>
+                
+                <div class="space-y-2">
+                    <label for="styleSelect" class="block text-sm font-medium text-slate-300">Choose a style:</label>
+                    <select id="styleSelect" name="style" class="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-slate-100 transition-all duration-200">
+                        <option value="formal">Formal</option>
+                        <option value="informal">Informal</option>
+                        <option value="auto">Auto</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl">Submit</button>
             </form>
         </div>
     </main>
-    <footer class="">
-        <div class="Footer bg-gray-900 text-white py-6">
-            <div class="container mx-auto px-4 py-6 text-center text-white bg-gray-900">
-                <h5 class="text-lg font-semibold">Made by Aayushya & Priyansu</h5><br>
-                <div class="githubcontainer">
-                    <a href="https://github.com/Aayushya-paswan" target="_blank" class=" hover:text-gray-400 p-4 ">Aayushya's
-                        GitHub</a>
-                    <a href="https://github.com/priyansu-1o" target="_blank" class=" hover:text-gray-400 p-4 ">Priyansu's
-                        GitHub</a>
-                </div>
-                <div class="linkedin p-2">
-                    <a href="https://www.linkedin.com/in/aayushya78/" target="_blank"
-                        class=" hover:text-gray-400 p-4 ">Aayushya's Linkedin</a>
-                    <a href="https://www.linkedin.com/in/priyansu-samanta-7924b930b/" target="_blank"
-                        class=" hover:text-gray-400 p-4">Priyansu's
-                        Linkedin</a>
-                </div>
+    <footer class="bg-slate-800/95 border-t border-slate-700/50">
+        <div class="container mx-auto px-4 py-8 text-center">
+            <h5 class="text-lg font-semibold text-slate-200 mb-4">Made by Aayushya & Priyansu</h5>
+            <div class="githubcontainer space-x-4 mb-4">
+                <a href="https://github.com/Aayushya-paswan" target="_blank" class="inline-block px-4 py-2 bg-slate-700/50 hover:bg-slate-600/70 rounded-lg transition-all duration-200 hover:text-blue-400 border border-slate-600/50">Aayushya's GitHub</a>
+                <a href="https://github.com/priyansu-1o" target="_blank" class="inline-block px-4 py-2 bg-slate-700/50 hover:bg-slate-600/70 rounded-lg transition-all duration-200 hover:text-blue-400 border border-slate-600/50">Priyansu's GitHub</a>
+            </div>
+            <div class="linkedin space-x-4">
+                <a href="https://www.linkedin.com/in/aayushya78/" target="_blank" class="inline-block px-4 py-2 bg-slate-700/50 hover:bg-slate-600/70 rounded-lg transition-all duration-200 hover:text-blue-400 border border-slate-600/50">Aayushya's LinkedIn</a>
+                <a href="https://www.linkedin.com/in/priyansu-samanta-7924b930b/" target="_blank" class="inline-block px-4 py-2 bg-slate-700/50 hover:bg-slate-600/70 rounded-lg transition-all duration-200 hover:text-blue-400 border border-slate-600/50">Priyansu's LinkedIn</a>
             </div>
         </div>
     </footer>
