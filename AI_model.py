@@ -2,7 +2,9 @@ import ollama
 client=ollama.Client()
 model="llama3.2:1b"
 
-while True:
-    text = input("Enter Prompt:- ")
+def give_response(text):
     response_text = client.generate(model=model, prompt=str(text))
-    print(response_text['response'])
+    return response_text['response']
+
+print(give_response("Hello there"))
+
