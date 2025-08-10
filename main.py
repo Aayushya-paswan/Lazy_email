@@ -14,7 +14,7 @@ The subject should match the tone and purpose of the email, be concise (ideally 
 If key details are missing, fill them in logically to make the subject line relevant and compelling.
 Do not include any part of the email body, greeting, closing, or extra explanation — return only the subject line.
 
-here id the Email context: """ + prompts)
+here id the Email prompt: """ + prompts)
         body = give_response("""Write only the main body text for an email based on the following prompt.
 Do not include a subject line, greeting, closing, signature, or any extra explanation.
 Use a tone (formal, semi-formal, or informal) that fits the context, but do not mention the tone in your response.
@@ -22,7 +22,7 @@ If details are missing, fill them in logically to make the email clear and coher
 Keep the length appropriate for the situation — concise for quick updates, more detailed for explanations or invitations.
 Respond with only the email body text, nothing else.
 
-Here is the Email context:  """+prompts)
+Here is the Email promptt:  """+prompts)
        # print(f"subject:- {subject}")
        # print(f"{body}")
         url = gmail_compose_url(recipients, str(subject), str(body))
